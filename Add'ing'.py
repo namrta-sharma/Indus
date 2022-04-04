@@ -3,16 +3,17 @@
 # If the len(str)<3 then it leaves the str unchanged
 
 # Ask for a string from the user
-def string():
+def str():
     myString = input("Please enter a string: ")
-    myString.split(" ")
-    String1=myString.split(" ")
+    
+    str=list(myString)
 
 # Use if statements
-    if len(String1)>=3:
-        print(myString+"ing")
-    elif myString[-3:]=="ing" or len(String1)>=3:
-        print(myString+"ly")
-    elif len(String1)<3:
+    if len(str)>=3:
+        if str[-3]=="i" and str[-2]=="n" and str[-1]=="g":
+            print(myString+"ly")
+        else:
+            print(myString+"ing")
+    elif len(str)<3:
         print(myString)
-string()
+str()
